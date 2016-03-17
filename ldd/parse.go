@@ -15,6 +15,7 @@ func parseDynLibToolOutput(cmd *exec.Cmd) (libs []string, err error) {
 	if err = cmd.Start(); err != nil {
 		return
 	}
+	defer cmd.Wait()
 
 	scanner := bufio.NewScanner(stdout)
 	scanner.Split(bufio.ScanWords)

@@ -12,5 +12,5 @@ func GetDynLibs(name string) ([]string, error) {
 }
 
 func getDynLoader() string {
-	return ""
+	return "/lib/x86_64-linux-gnu/ld-2.19.so"
 }

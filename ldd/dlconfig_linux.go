@@ -6,6 +6,12 @@ import (
 	"strings"
 )
 
+var ConfigFiles = []string{
+	// File containing a list of colon, space, tab, newline, or comma-separated
+	// directories in which to search for libraries.
+	"/etc/ld.so.conf",
+}
+
 // GetDynLibDirs returns locations (directories) where the dynamic linker (DL)
 // looks for .so libraries when it launches applications.
 //
